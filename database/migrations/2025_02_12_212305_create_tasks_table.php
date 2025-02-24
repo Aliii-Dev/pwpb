@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->dateTime('due_date');
-            $table->string('status')->default('pending');
+            $table->string('status')->default('belum_selesai');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->dateTime('completed_at')->nullable();
             $table->timestamps();

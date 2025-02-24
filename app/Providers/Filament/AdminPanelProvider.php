@@ -10,6 +10,7 @@ use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
+use Rmsramos\Activitylog\ActivitylogPlugin;
 use Filament\Widgets;
 use Swis\Filament\Backgrounds\FilamentBackgroundsPlugin;
 use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
@@ -27,10 +28,12 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
+            ->sidebarCollapsibleOnDesktop(true)
             ->id('admin')
             ->path('admin')
             ->login()
             ->registration()
+            ->brandName('To Do List')
             ->colors([
                 'primary' => Color::Pink,
             ])

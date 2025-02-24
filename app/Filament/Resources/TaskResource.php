@@ -33,11 +33,10 @@ class TaskResource extends Resource
                 ->required(),
             Forms\Components\Select::make('status')
                 ->options([
-                    'pending' => 'Pending',
-                    'in_progress' => 'In Progress',
-                    'completed' => 'Completed',
+                    'belum_selesai' => 'Belum Selesai',
+                    'selesai' => 'Selesai',
                 ])
-                ->default('pending')
+                ->default('belum_selesai')
                 ->required(),
             Forms\Components\Select::make('user_id')
                 ->relationship('user', 'name')
